@@ -10,5 +10,17 @@
 - [ ] Utilize try and catch
 - [ ] Create
     - [ ] Create Contact (First & Last Name)
-    - [ ] Create Phone Number (Optional)
+    - [ ] Create Phone Number 
     - [ ] Create Address (Optional)
+- [ ] Read
+    - [ ] Read full address book in ascending order
+    - [ ] Search for Contact based on Name ( requirments for update )
+    - [ ] Search for Contact based on Number ( requirments for update )
+- [ ] Update
+    - [ ] Update Name
+    - [ ] Update Phone number
+- [ ] Delete
+    -[ ] Delete Number in contact
+    -[ ] Delete one full contact
+    -[ ] Delete entire address book
+    
