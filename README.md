@@ -24,3 +24,10 @@
     - [ ] Delete one full contact
     - [ ] Delete entire address book
     
+### Flow of program
+* the user can upload a csv file for their address book
+* the user can also add a user if they have:
+    * Firstname || Lastname || Phone Number
+    * Optional (email, home phone, street number,
+      zipe code, city, state)
+    
