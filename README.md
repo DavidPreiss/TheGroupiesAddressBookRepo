@@ -20,7 +20,7 @@
     - [ ] Update Name
     - [ ] Update Phone number
 - [ ] Delete
-    -[ ] Delete Number in contact
-    -[ ] Delete one full contact
-    -[ ] Delete entire address book
+    - [ ] Delete Number in contact
+    - [ ] Delete one full contact
+    - [ ] Delete entire address book
     
