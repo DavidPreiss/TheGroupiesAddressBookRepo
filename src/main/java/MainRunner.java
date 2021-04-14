@@ -23,10 +23,10 @@ public class MainRunner
         Contact VoidLord = new Contact("Void","Lord","6666666666");
         return VoidLord;
     }
-    public static void addContact(Contact inputContact)
+    public static void addContact(Contact inputContact, AddressBook addressBook)
     {
 
-        System.out.println("Add Not Yet Implemented");
+        addressBook.add(inputContact);
     }
     public static void deleteContact(Contact inputContact)
     {
@@ -116,12 +116,12 @@ public class MainRunner
 
                     System.out.println("Input First Name: ");
                     String userFirstName = scanner.nextLine();
-                    System.out.println("Input First Name: ");
+                    System.out.println("Input Last Name: ");
                     String userLastName = scanner.nextLine();
                     System.out.println("Input Mobile Number: ");
                     String userMobile = scanner.nextLine();
                     Contact userContact = new Contact(userFirstName,userLastName,userMobile);
-                    addContact(userContact);
+                    addContact(userContact, addressBook);
                     System.out.println("contact added");
 
                     break;
