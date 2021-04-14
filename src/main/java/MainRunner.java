@@ -168,13 +168,20 @@ public class MainRunner
 
                             case 'p':
                             {
-
                                     System.out.println("input Mobile number");
                                     String mobileString = scanner.nextLine().toLowerCase();
                                     // MyContact = searchByMobile(mobileString);
                                     // below is equivalent method from AddressBook class
+                                try
+                                {
                                     MyContact = addressBook.searchByMobile(mobileString).get(0);
-                                    haveContact = true;
+                                }
+                                catch (Exception e)
+                                {
+                                    System.out.println("Contact not found");
+                                    continue;
+                                }
+                                haveContact = true;
                                 break;
                             }
                             case 'n':
@@ -183,7 +190,15 @@ public class MainRunner
                                 String nameString = scanner.nextLine().toLowerCase();
                                 // MyContact = searchByName(nameString);
                                 // below is equivalent method from AddressBook class
-                                MyContact = addressBook.searchByFullName(nameString).get(0);
+                                try
+                                {
+                                    MyContact = addressBook.searchByFullName(nameString).get(0);
+                                }
+                                catch (Exception e)
+                                {
+                                    System.out.println("Contact not found");
+                                    continue;
+                                }
                                 haveContact = true;
                                 break;
                             }
