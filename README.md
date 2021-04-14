@@ -41,6 +41,8 @@
   - The user will be able to find the contact either by phone number or by name
   - once found the user will be able to update,
   - `(C)hange - (D)elete - (E)xit`
+  - (C)hange will allow you to overwright contact but will add first last name, phone number, home phone, email, ect.
+  - (D)elete will delete contact
   
   
 * the user can also add a user if they have:
