@@ -14,8 +14,8 @@
     - [x] Create Address (Optional)
 - [ ] Read
     - [x] Read full address book in ascending order
-    - [ ] Search for Contact based on Name ( requirments for update )
-    - [ ] Search for Contact based on Number ( requirments for update )
+    - [x] Search for Contact based on Name ( requirments for update )
+    - [x] Search for Contact based on Number ( requirments for update )
 - [ ] Update
     - [ ] Update Name
     - [ ] Update Phone number
@@ -26,13 +26,9 @@
     
 ### Flow of program
 * upload a csv file for their address book
-* User will begin at the main menu where they can choose to 
-  - Create: choose to adding (First and last name + number)
-  - Read: choose to read entire address book 
-  - Update: choose to find a contact by 
-    - name or by number
-    -  update from there
-  - Delete 
+* User will begin at the main menu where they will be greated
+  - "Hello welcome to the address book!"
+   - (A)dd - (P)rint All - (S)earch - (E)xit
 * the user can also add a user if they have:
   - [ ] Firstname || Lastname || Phone Number
     * Optional (email, home phone, street number,

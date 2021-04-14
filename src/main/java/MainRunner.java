@@ -23,15 +23,14 @@ public class MainRunner
         Contact VoidLord = new Contact("Void","Lord","6666666666");
         return VoidLord;
     }
-    public static void addContact(Contact inputContact)
+    public static void addContact(Contact inputContact, AddressBook inputBook)
     {
 
         System.out.println("Add Not Yet Implemented");
     }
-    public static void deleteContact(Contact inputContact)
+    public static void deleteContact(Contact inputContact, AddressBook inputBook)
     {
-
-        System.out.println("Delete Not Yet Implemented");
+        inputBook.deleteContact(inputContact);
     }
     // Method below is implemented in AddressBook
     public static void printEveryContact()
@@ -126,10 +125,7 @@ public class MainRunner
                     String userMobile = scanner.nextLine();
                     //create a new contact using the strings read from the user
                     Contact userContact = new Contact(userFirstName,userLastName,userMobile);
-                    //if they want to input other fields they'll have to search and change
-
-                    //add the contact that was created
-                    addContact(userContact);
+                    addContact(userContact,addressBook);
                     System.out.println("contact added");
 
                     break;
@@ -228,7 +224,7 @@ public class MainRunner
                                     }
                                     case 'd': //delete
                                     {
-                                        deleteContact(MyContact);
+                                        deleteContact(MyContact,addressBook);
                                         System.out.println("Contact Deleted");
                                         repeat3 = false;
                                         break;
