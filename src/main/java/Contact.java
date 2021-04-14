@@ -132,6 +132,16 @@ public class Contact
     }
     // End Getters and Setters
 
+
+    @Override
+    public String toString()
+    {
+        String fullName = firstName + " " + lastName;
+        String fullAddress = streetNumber + " " + streetName;
+        return String.format("%-21s | %-10s | %-10s | %-20s | %-20s | %-15s | %-10s\n", fullName, mobileNumber, phoneNumber, email,
+                      fullAddress, city, zipCode);
+    }
+
     /**
      * Prints all data for a contact in a single row to the terminal
      */
@@ -139,7 +149,7 @@ public class Contact
     {
         String fullName = firstName + " " + lastName;
         String fullAddress = streetNumber + " " + streetName;
-        System.out.printf("%-21s | %-10s | %-10s | %-20s | %-20s | %-15s | %-10s\n", fullName, mobileNumber, phoneNumber, email,
+        System.out.printf("%-21s | %-10s | %-10s | %-20s | %-20s | %-15s | %-10s", fullName, mobileNumber, phoneNumber, email,
                           fullAddress, city, zipCode);
     }
 } // end class

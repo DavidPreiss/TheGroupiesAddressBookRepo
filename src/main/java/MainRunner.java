@@ -122,7 +122,7 @@ public class MainRunner
         while (iterator.hasNext())
         {
             Contact contact = iterator.next();
-            contact.printAllFieldsInRow();
+            System.out.println(contact.toString());
         }
     }
 }
