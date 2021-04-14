@@ -26,7 +26,7 @@ public class MainRunner
     public static void addContact(Contact inputContact, AddressBook inputBook)
     {
 
-        System.out.println("Add Not Yet Implemented");
+        inputBook.add(inputContact);
     }
     public static void deleteContact(Contact inputContact, AddressBook inputBook)
     {
@@ -119,7 +119,7 @@ public class MainRunner
                     //Read the user input and store as strings
                     System.out.println("Input First Name: ");
                     String userFirstName = scanner.nextLine();
-                    System.out.println("Input First Name: ");
+                    System.out.println("Input Last Name: ");
                     String userLastName = scanner.nextLine();
                     System.out.println("Input Mobile Number: ");
                     String userMobile = scanner.nextLine();
