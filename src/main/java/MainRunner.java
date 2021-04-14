@@ -7,6 +7,19 @@ import java.util.Scanner;
 
 public class MainRunner
 {
+
+    public static Contact searchByName(String input)
+    {
+        System.out.println("Not yet implemented!\n"+input);
+        Contact VoidLord = new Contact("Void","Lord","6666666666");
+        return VoidLord;
+    }
+    public static Contact searchByMobile(String input)
+    {
+        System.out.println("Not yet implemented!\n"+input);
+        Contact VoidLord = new Contact("Void","Lord","6666666666");
+        return VoidLord;
+    }
     public static void main(String[] args)
     {
         //main start
@@ -17,7 +30,7 @@ public class MainRunner
         {
 
             System.out.println("Hello welcome to the address book!");
-            System.out.println("(A)dd - (R)emove - (P)rint - (S)earch - (E)xit");
+            System.out.println("(A)dd - (P)rint - (S)earch - (E)xit");
 
             String userInput = scanner.nextLine().toLowerCase();
             if (userInput.equals(""))userInput = " ";
@@ -54,7 +67,100 @@ public class MainRunner
                 case 's': //search for specific contact
                 {
 
-                    System.out.println("Search not yet implemented!");
+                    //System.out.println("Search not yet implemented!");
+                    boolean repeat2 = true;
+                    boolean haveContact = false;
+                    Contact MyContact = new Contact("Default","Contact","1112223333");
+                    while (repeat2)
+                    {
+                        System.out.println("Search by (P)hone or (N)ame? (E)xit");
+                        String userOrder = scanner.nextLine().toLowerCase();
+                        if (userOrder.equals(""))userOrder = " ";
+                        char orderChar = userOrder.charAt(0);
+                        switch (orderChar)
+                        {
+                            case 'e': //exit
+                            {
+                                repeat2 = false;
+                                haveContact = false;
+                                System.out.println("Returning to Main Menu!");
+                                break;
+                            }
+
+                            case 'p':
+                            {
+
+                                    System.out.println("input Mobile number");
+                                    String mobileString = scanner.nextLine().toLowerCase();
+                                    MyContact = searchByMobile(mobileString);
+                                    haveContact = true;
+                                break;
+                            }
+                            case 'n':
+                            {
+                                System.out.println("input Name");
+                                String nameString = scanner.nextLine().toLowerCase();
+                                MyContact = searchByName(nameString);
+                                haveContact = true;
+                                break;
+                            }
+                            default:
+                            {
+                                System.out.println("invalid input");
+                                break;
+                            }
+                        }
+                        if(haveContact)
+                        {
+
+                            boolean repeat3 = true;
+                            while (repeat3)
+                            {
+                                System.out.println("Contact info: ");
+                                MyContact.printAllFieldsInRow();
+                                System.out.println("\n (C)hange - (D)elete - (E)xit");
+
+                                String userCDE = scanner.nextLine().toLowerCase();
+                                if (userCDE.equals(""))userCDE = " ";
+                                char cdeChar = userCDE.charAt(0);
+                                switch (cdeChar)
+                                {
+
+                                    case 'e': //exit
+                                    {
+                                        repeat3 = false;
+                                        System.out.println("Goodbye!");
+                                        break;
+                                    }
+
+                                    case 'c': //change
+                                    {
+                                        System.out.println("Change Not yet implemented!\n" +
+                                                "replace this print statement with a method call!");
+                                        System.out.println("");
+                                        break;
+                                    }
+                                    case 'd': //delete
+                                    {
+                                        System.out.println("Delete Not yet implemented!\n" +
+                                        "replace this print statement with a method call!");
+
+                                        System.out.println("Contact Deleted");
+                                        repeat3 = false;
+                                        break;
+                                    }
+
+                                    default:
+                                    {
+                                        System.out.println("invalid input");
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     break;
                 }
                 default:
