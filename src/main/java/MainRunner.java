@@ -53,7 +53,7 @@ public class MainRunner
 
         System.out.println("Input Mobile Number: ");
         String Mobile = scanner.nextLine();
-        if (!LastName.equals("")) inputContact.setLastName(LastName);
+        if (!Mobile.equals("")) inputContact.setMobileNumber(Mobile);
 
         System.out.println("Input LandLine Phone Number: ");
         String Landline = scanner.nextLine();
