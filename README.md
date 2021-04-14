@@ -12,30 +12,36 @@
     - [x] Create Contact (First & Last Name)
     - [x] Create Phone Number 
     - [x] Create Address (Optional)
-- [ ] Read
+- [x] Read
     - [x] Read full address book in ascending order
-    - [ ] Search for Contact based on Name ( requirments for update )
-    - [ ] Search for Contact based on Number ( requirments for update )
-- [ ] Update
-    - [ ] Update Name
-    - [ ] Update Phone number
-- [ ] Delete
-    - [ ] Delete Number in contact
-    - [ ] Delete one full contact
-    - [ ] Delete entire address book
+    - [x] Search for Contact based on Name ( requirments for update )
+    - [x] Search for Contact based on Number ( requirments for update )
+- [x] Update
+    - [x] Update Name
+    - [x] Update Phone number
+    - [x] Add Optional Fields
+- [x] Delete
+    - [x] Delete one full contact
     
 ### Flow of program
 * upload a csv file for their address book
-* User will begin at the main menu where they can choose to 
-  - Create: choose to adding (First and last name + number)
-  - Read: choose to read entire address book 
-  - Update: choose to find a contact by 
-    - name or by number
-    -  update from there
-  - Delete 
-* the user can also add a user if they have:
-  - [ ] Firstname || Lastname || Phone Number
-    * Optional (email, home phone, street number,
-      zipe code, city, state)
+* User will begin at the main menu where they will be greated
+  - "Hello welcome to the address book!"
+   - (A)dd - (P)rint All - (S)earch - (E)xit
+* Create = User chooses (A)dd
+  - It will then prompt the user to add:
+    - First Name
+    - Last Name
+    - Number
+     - ` All Other fields maybe added later`
+* Read = (P)rint All
+  - It will display all the contacts in the address book
+* Update = (S)earch
+  - The user will be able to find the contact either by phone number or by name
+  - once found the user will be able to update,
+  - `(C)hange - (D)elete - (E)xit`
+  - (C)hange will allow you to overwright contact but will add first last name, phone number, home phone, email, ect.
+  - (D)elete will delete contact
+  
   
     
