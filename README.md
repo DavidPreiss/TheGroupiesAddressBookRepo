@@ -4,16 +4,16 @@
 [Trello Link!](https://trello.com/b/I2Z0Qqij/thegroupez-addressbook)
 
 ### Requirments
-- [ ] An addressbook class, mainrunner class, interfaces, use abstraction if you can!
-- [ ] Use Interfaces and Methods available or create your own if they don’t exist e.g. (comparable, comparator)
-- [ ] Use BufferedReader/Writer.
-- [ ] Utilize try and catch
-- [ ] Create
-    - [ ] Create Contact (First & Last Name)
-    - [ ] Create Phone Number 
-    - [ ] Create Address (Optional)
+- [x] An addressbook class, mainrunner class, interfaces, use abstraction if you can!
+- [x] Use Interfaces and Methods available or create your own if they don’t exist e.g. (comparable, comparator)
+- [x] Use BufferedReader/Writer.
+- [x] Utilize try and catch
+- [x] Create
+    - [x] Create Contact (First & Last Name)
+    - [x] Create Phone Number 
+    - [x] Create Address (Optional)
 - [ ] Read
-    - [ ] Read full address book in ascending order
+    - [x] Read full address book in ascending order
     - [ ] Search for Contact based on Name ( requirments for update )
     - [ ] Search for Contact based on Number ( requirments for update )
 - [ ] Update
@@ -25,9 +25,17 @@
     - [ ] Delete entire address book
     
 ### Flow of program
-* the user can upload a csv file for their address book
+* upload a csv file for their address book
+* User will begin at the main menu where they can choose to 
+  - Create: choose to adding (First and last name + number)
+  - Read: choose to read entire address book 
+  - Update: choose to find a contact by 
+    - name or by number
+    -  update from there
+  - Delete 
 * the user can also add a user if they have:
-    * Firstname || Lastname || Phone Number
+  - [ ] Firstname || Lastname || Phone Number
     * Optional (email, home phone, street number,
       zipe code, city, state)
+  
     
