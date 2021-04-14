@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -20,6 +21,63 @@ public class MainRunner
         Contact VoidLord = new Contact("Void","Lord","6666666666");
         return VoidLord;
     }
+    public static void addContact(Contact inputContact)
+    {
+
+        System.out.println("Add Not Yet Implemented");
+    }
+    public static void deleteContact(Contact inputContact)
+    {
+
+        System.out.println("Delete Not Yet Implemented");
+    }
+    public static void printEveryContact()
+    {
+        System.out.println("not yet implemented");
+    }
+    public static void changeContact(Contact inputContact, Scanner scanner)
+    {
+        Contact newContact = inputContact;
+        //change newContact
+        System.out.println("\t Enter new info to change field, enter nothing to keep same");
+
+        System.out.println("Input First Name: ");
+        String FirstName = scanner.nextLine();
+        if (!FirstName.equals("")) inputContact.setFirstName(FirstName);
+
+        System.out.println("Input Last Name: ");
+        String LastName = scanner.nextLine();
+        if (!LastName.equals("")) inputContact.setLastName(LastName);
+
+        System.out.println("Input Mobile Number: ");
+        String Mobile = scanner.nextLine();
+        if (!LastName.equals("")) inputContact.setLastName(LastName);
+
+        System.out.println("Input LandLine Phone Number: ");
+        String Landline = scanner.nextLine();
+        if (!Landline.equals("")) inputContact.setPhoneNumber(Landline);
+
+        System.out.println("Input Email: ");
+        String Email = scanner.nextLine();
+        if (!Email.equals("")) inputContact.setEmail(Email);
+
+        System.out.println("Input Street Name: ");
+        String StreetName = scanner.nextLine();
+        if (!StreetName.equals("")) inputContact.setStreetName(StreetName);
+
+        System.out.println("Input Street Number: ");
+        String StreetNum = scanner.nextLine();
+        if (!StreetNum.equals("")) inputContact.setStreetNumber(StreetNum);
+
+        System.out.println("Input City: ");
+        String City = scanner.nextLine();
+        if (!City.equals("")) inputContact.setCity(City);
+
+        System.out.println("Input Zip Code: ");
+        String Zip = scanner.nextLine();
+        if (!Zip.equals("")) inputContact.setZipCode(Zip);
+
+    }
     public static void main(String[] args)
     {
         //main start
@@ -30,7 +88,7 @@ public class MainRunner
         {
 
             System.out.println("Hello welcome to the address book!");
-            System.out.println("(A)dd - (P)rint - (S)earch - (E)xit");
+            System.out.println("(A)dd - (P)rint All - (S)earch - (E)xit");
 
             String userInput = scanner.nextLine().toLowerCase();
             if (userInput.equals(""))userInput = " ";
@@ -49,19 +107,22 @@ public class MainRunner
                 case 'a': //add new contact
                 {
 
-                    System.out.println("Add not yet implemented!");
-                    break;
-                }
-                case 'r': //remove contact
-                {
+                    System.out.println("Input First Name: ");
+                    String userFirstName = scanner.nextLine();
+                    System.out.println("Input First Name: ");
+                    String userLastName = scanner.nextLine();
+                    System.out.println("Input Mobile Number: ");
+                    String userMobile = scanner.nextLine();
+                    Contact userContact = new Contact(userFirstName,userLastName,userMobile);
+                    addContact(userContact);
+                    System.out.println("contact added");
 
-                    System.out.println("Remove not yet implemented!");
                     break;
                 }
                 case 'p': //print all contacts
                 {
 
-                    System.out.println("Print All not yet implemented!");
+                    printEveryContact();
                     break;
                 }
                 case 's': //search for specific contact
@@ -135,16 +196,13 @@ public class MainRunner
 
                                     case 'c': //change
                                     {
-                                        System.out.println("Change Not yet implemented!\n" +
-                                                "replace this print statement with a method call!");
-                                        System.out.println("");
+                                        changeContact(MyContact, scanner);
+                                        System.out.println("Contact Changed");
                                         break;
                                     }
                                     case 'd': //delete
                                     {
-                                        System.out.println("Delete Not yet implemented!\n" +
-                                        "replace this print statement with a method call!");
-
+                                        deleteContact(MyContact);
                                         System.out.println("Contact Deleted");
                                         repeat3 = false;
                                         break;
