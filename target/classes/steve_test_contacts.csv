@@ -5,5 +5,9 @@ Mary,Smith,21099999,999999,mary@mail.com,Thisstrt,9,Boston,5432
 Mary, Adams, 23029392, 3288282, mary@hotmail.com, Maple Street, 39,New York, 15647
 Prashant Barge ,Barge,908767,987678,poijadn@google.com,koli nagar,89,polish,789
 David, Bowie,,934884,bowie@bowie.net, Main St, 345,London,  45654
+<<<<<<< HEAD
 Fred,    Flintstone, 394993, 394993, fred@bedrock.com, Happy St, 34,Boston, 15645
 David, Jones, 39492993, 39493993, david@david.com, Main st, 444, Cleveland, 38484
+=======
+Fred, Flintstone, 394993, 394993, fred@bedrock.com, Happy St, 34,Boston, 15645
+>>>>>>> origin/main
