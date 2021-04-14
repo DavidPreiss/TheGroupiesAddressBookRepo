@@ -63,6 +63,11 @@ public class MainRunner
             {
                 String entry = scanner.nextLine();
                 String[] entryFields = entry.split(",");
+                // If a row is not formed correctly or blank, skip the line
+                if (entryFields.length != 9)
+                {
+                    continue;
+                }
                 contactList.add(new Contact(entryFields));
             }
             scanner.close();
