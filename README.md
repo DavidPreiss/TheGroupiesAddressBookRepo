@@ -17,12 +17,11 @@
     - [x] Search for Contact based on Name ( requirments for update )
     - [x] Search for Contact based on Number ( requirments for update )
 - [x] Update
-    - [ ] Update Name
-    - [ ] Update Phone number
-- [ ] Delete
-    - [ ] Delete Number in contact
-    - [ ] Delete one full contact
-    - [ ] Delete entire address book
+    - [x] Update Name
+    - [x] Update Phone number
+    - [x] Add Optional Fields
+- [x] Delete
+    - [x] Delete one full contact
     
 ### Flow of program
 * upload a csv file for their address book
@@ -44,10 +43,5 @@
   - (C)hange will allow you to overwright contact but will add first last name, phone number, home phone, email, ect.
   - (D)elete will delete contact
   
-  
-* the user can also add a user if they have:
-  - [ ] Firstname || Lastname || Phone Number
-    * Optional (email, home phone, street number,
-      zipe code, city, state)
   
     
