@@ -14,8 +14,8 @@
     - [x] Create Address (Optional)
 - [ ] Read
     - [x] Read full address book in ascending order
-    - [ ] Search for Contact based on Name ( requirments for update )
-    - [ ] Search for Contact based on Number ( requirments for update )
+    - [x] Search for Contact based on Name ( requirments for update )
+    - [x] Search for Contact based on Number ( requirments for update )
 - [ ] Update
     - [ ] Update Name
     - [ ] Update Phone number
