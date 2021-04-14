@@ -74,8 +74,7 @@ public class MainRunner
         }
         catch (FileNotFoundException e)
         {
-            System.out.println("Invalid file");
-            e.printStackTrace();
+            System.out.println("File not found");
         }
 
         // Sort the list alphabetically after loading
