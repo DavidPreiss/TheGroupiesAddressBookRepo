@@ -20,7 +20,10 @@ public class AddressBook
         this.contactList = readData(contactCsv);
     }
 
-
+    public void deleteContact (Contact contact)
+    {
+        contactList.remove(contact);
+    }
 
     /**
      * Reads the CSV file and stores the data into an ArrayList of Contact objects.
