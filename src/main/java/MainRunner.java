@@ -178,7 +178,7 @@ public class MainRunner
                             while (repeat3)
                             {
                                 System.out.println("Contact info: ");
-                                MyContact.printAllFieldsInRow();
+                                MyContact.toString();
                                 System.out.println("\n (C)hange - (D)elete - (E)xit");
 
                                 String userCDE = scanner.nextLine().toLowerCase();
