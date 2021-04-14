@@ -215,4 +215,15 @@ SEARCHING METHODS***************************************************
             System.out.println(contact.toString());
         }
     }
+
+    /**
+     * add new contact
+     *
+     * @param newContact contact to be added
+     */
+    public void add(Contact newContact) {
+
+        contactList.add(newContact);
+
+    }
 }
