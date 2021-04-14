@@ -3,17 +3,20 @@ import java.io.FileNotFoundException;
 import java.sql.SQLOutput;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class MainRunner
 {
 
+    // Method below is implemented in AddressBook
     public static Contact searchByName(String input)
     {
         System.out.println("Not yet implemented!\n"+input);
         Contact VoidLord = new Contact("Void","Lord","6666666666");
         return VoidLord;
     }
+    // Method below is implemented in AddressBook
     public static Contact searchByMobile(String input)
     {
         System.out.println("Not yet implemented!\n"+input);
@@ -30,6 +33,7 @@ public class MainRunner
 
         System.out.println("Delete Not Yet Implemented");
     }
+    // Method below is implemented in AddressBook
     public static void printEveryContact()
     {
         System.out.println("not yet implemented");
@@ -80,6 +84,10 @@ public class MainRunner
     public static void main(String[] args)
     {
         //main start
+        // create address book with csv file
+        File csvFile = new File("src/main/resources/steve_test_contacts.csv");
+        AddressBook addressBook = new AddressBook(csvFile);
+
         System.out.println("\t MAIN START");
         Scanner scanner = new Scanner(System.in);
         boolean repeat1 = true;
@@ -121,7 +129,8 @@ public class MainRunner
                 case 'p': //print all contacts
                 {
 
-                    printEveryContact();
+                    // printEveryContact();
+                    addressBook.displayContacts(1); // Method defined in AddressBook
                     break;
                 }
                 case 's': //search for specific contact
@@ -152,7 +161,9 @@ public class MainRunner
 
                                     System.out.println("input Mobile number");
                                     String mobileString = scanner.nextLine().toLowerCase();
-                                    MyContact = searchByMobile(mobileString);
+                                    // MyContact = searchByMobile(mobileString);
+                                    // below is equivalent method from AddressBook class
+                                    MyContact = addressBook.searchByMobile(mobileString).get(0);
                                     haveContact = true;
                                 break;
                             }
@@ -160,7 +171,9 @@ public class MainRunner
                             {
                                 System.out.println("input Name");
                                 String nameString = scanner.nextLine().toLowerCase();
-                                MyContact = searchByName(nameString);
+                                // MyContact = searchByName(nameString);
+                                // below is equivalent method from AddressBook class
+                                MyContact = addressBook.searchByFullName(nameString).get(0);
                                 haveContact = true;
                                 break;
                             }
@@ -177,7 +190,7 @@ public class MainRunner
                             while (repeat3)
                             {
                                 System.out.println("Contact info: ");
-                                MyContact.toString();
+                                System.out.println(MyContact.toString()); // Steve wrapped this in a println
                                 System.out.println("\n (C)hange - (D)elete - (E)xit");
 
                                 String userCDE = scanner.nextLine().toLowerCase();
@@ -229,38 +242,6 @@ public class MainRunner
 
             }
         }
-
-
-        /*
-        ********************************************************************************
-        This is a test of the address book class.
-        * Creates a File object, passes it to the AddressBook constructor, and tests
-        * the displayContacts method.
-         */
-  /*
-        // Create new AddressBook
-        File csvFile = new File("src/main/resources/steve_test_contacts.csv");
-        AddressBook testBook = new AddressBook(csvFile);
-        // Test display all method
-        testBook.displayContacts(1);
-        System.out.println();
-        // Test search by first name
-        ArrayList<Contact> testSearch = testBook.searchByFirstName("David");
-        System.out.println("Matching first names: " + testSearch.toString());
-        System.out.println();
-        // Test search by mobile
-        ArrayList<Contact> testMobileSearch = testBook.searchByMobile("39492993");
-        System.out.println("Matching phone numbers: " + testMobileSearch);
-        System.out.println();
-        // Test search by full name
-        ArrayList<Contact> testFullNameSearch = testBook.searchByFullName("  Fred   Flintstone  ");
-        System.out.println("Matching full names: " + testFullNameSearch);
-        System.out.println();
-        // Test search by last name
-        ArrayList<Contact> testLastNameSearch = testBook.searchByLastName("Flintstone ");
-        System.out.println("Matching last name: " + testLastNameSearch);
-        // ******************************************************************************
-        */
     }
     //main end
 
