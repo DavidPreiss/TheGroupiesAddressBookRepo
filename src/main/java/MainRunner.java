@@ -11,13 +11,62 @@ public class MainRunner
     {
         //main start
         System.out.println("\t MAIN START");
-        System.out.println("DAVID PREISS CAN CHANGE THIS FILE >:)");
-        System.out.println("Louisa is here, too!");
-        System.out.println("Sid is here!");
-        //BEWARE!!!!
-        //added on git branch
+        Scanner scanner = new Scanner(System.in);
+        boolean repeat1 = true;
+        while (repeat1)
+        {
 
-        //Pssst! Liz
+            System.out.println("Hello welcome to the address book!");
+            System.out.println("(A)dd - (R)emove - (P)rint - (S)earch - (E)xit");
+
+            String userInput = scanner.nextLine().toLowerCase();
+            if (userInput.equals(""))userInput = " ";
+            char usrInChar = userInput.charAt(0);
+            System.out.println("userInput: "+userInput);
+            switch (usrInChar)
+            {
+
+                case 'e': //exit
+                {
+                    repeat1 = false;
+                    System.out.println("Goodbye!");
+                    break;
+                }
+
+                case 'a': //add new contact
+                {
+
+                    System.out.println("Add not yet implemented!");
+                    break;
+                }
+                case 'r': //remove contact
+                {
+
+                    System.out.println("Remove not yet implemented!");
+                    break;
+                }
+                case 'p': //print all contacts
+                {
+
+                    System.out.println("Print All not yet implemented!");
+                    break;
+                }
+                case 's': //search for specific contact
+                {
+
+                    System.out.println("Search not yet implemented!");
+                    break;
+                }
+                default:
+                {
+                    System.out.println("invalid input");
+                    break;
+                }
+
+
+            }
+        }
+
 
         /*
         ********************************************************************************
@@ -28,11 +77,14 @@ public class MainRunner
         This makes a File object, reads the data into an ArrayList<Contact>, and prints
         out the list sorted by name, and then by city.
          */
+        /*
         File csvFile = new File("src/main/resources/steve_test_contacts.csv");
         ArrayList<Contact> contacts = readData(csvFile);
         displayContacts(contacts, 1);
         System.out.println();
         displayContacts(contacts, 2);
+
+         */
         // ******************************************************************************
     }
     //main end
