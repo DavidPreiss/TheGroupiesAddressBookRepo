@@ -67,6 +67,113 @@ public class AddressBook
         return contactList;
     }
 
+/*
+SEARCHING METHODS***************************************************
+ */
+    /**
+     * Searches the contactList for matching first names and returns
+     * all Contacts with that first name. Ignores case.
+     * @param firstName name to search for
+     * @return list of matching contacts or an empty array if no contacts are found
+     */
+    public ArrayList<Contact> searchByFirstName(String firstName)
+    {
+        // List to store matches
+        ArrayList<Contact> matchingContacts = new ArrayList<>();
+
+        // Search the list
+        Iterator<Contact> iterator = contactList.listIterator();
+        while (iterator.hasNext())
+        {
+            Contact next = iterator.next();
+            if (next.getFirstName().trim().equalsIgnoreCase(firstName.trim()))
+            {
+                matchingContacts.add(next);
+            }
+        }
+        return matchingContacts;
+    }
+
+    /**
+     * Searches the contactList for matching last names and returns
+     * all Contacts with that first name. Ignores case.
+     * @param lastName name to search for
+     * @return list of matching contacts or an empty array if no contacts are found
+     */
+    public ArrayList<Contact> searchByLastName(String lastName)
+    {
+        // List to store matches
+        ArrayList<Contact> matchingContacts = new ArrayList<>();
+
+        // Search the list
+        Iterator<Contact> iterator = contactList.listIterator();
+        while (iterator.hasNext())
+        {
+            Contact next = iterator.next();
+            if (next.getLastName().trim().equalsIgnoreCase(lastName.trim()))
+            {
+
+                matchingContacts.add(next);
+            }
+        }
+        return matchingContacts;
+    }
+
+    /**
+     * Searches the contactList for Contacts matching the given
+     * mobile number.
+     * @param mobile number to search for
+     * @return ListArray of matching Contacts or empty array if none are found.
+     */
+    public ArrayList<Contact> searchByMobile(String mobile)
+    {
+        ArrayList<Contact> matchingContacts = new ArrayList<>();
+
+        Iterator<Contact> iterator = contactList.listIterator();
+        while (iterator.hasNext())
+        {
+            Contact next = iterator.next();
+            if (next.getMobileNumber().trim().equals(mobile.trim()))
+            {
+                matchingContacts.add(next);
+            }
+        }
+        return matchingContacts;
+    }
+
+
+    /**
+     * Searches the contactList for Contacts matching the given
+     * full name. Case is ignored
+     * @param fullName first and last name to search for
+     * @return ListArray of matching Contacts or empty array if none are found.
+     */
+    public ArrayList<Contact> searchByFullName(String fullName)
+    {
+        // Split name
+        String trimmedName = fullName.trim();
+        int splitPoint = trimmedName.indexOf(' ');
+        String firstName = trimmedName.substring(0, splitPoint);
+        String lastName = trimmedName.substring(splitPoint + 1);
+
+        ArrayList<Contact> matchingContacts = new ArrayList<>();
+
+        Iterator<Contact> iterator = contactList.listIterator();
+        while (iterator.hasNext())
+        {
+            Contact next = iterator.next();
+            if (next.getFirstName().trim().equalsIgnoreCase(firstName.trim()) && next.getLastName().trim().equalsIgnoreCase(lastName.trim()))
+            {
+                matchingContacts.add(next);
+            }
+        }
+        return matchingContacts;
+    }
+
+
+
+
+
     /**
      * Displays all contacts in a poorly and hastily created format.
      * I would think that this will also be moved to an address book class.
