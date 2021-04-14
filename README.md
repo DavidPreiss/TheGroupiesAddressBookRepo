@@ -12,11 +12,11 @@
     - [x] Create Contact (First & Last Name)
     - [x] Create Phone Number 
     - [x] Create Address (Optional)
-- [ ] Read
+- [x] Read
     - [x] Read full address book in ascending order
     - [x] Search for Contact based on Name ( requirments for update )
     - [x] Search for Contact based on Number ( requirments for update )
-- [ ] Update
+- [x] Update
     - [ ] Update Name
     - [ ] Update Phone number
 - [ ] Delete
@@ -29,6 +29,18 @@
 * User will begin at the main menu where they will be greated
   - "Hello welcome to the address book!"
    - (A)dd - (P)rint All - (S)earch - (E)xit
+* Create = User chooses (A)dd
+  - It will then prompt the user to add:
+    - First Name
+    - Last Name
+    - Number
+     - ` All Other fields maybe added later`
+* Read = (P)rint All
+  - It will display all the contacts in the address book
+* Update = (S)earch
+  - The user will be able to find the contact either by phone number or by name
+  - once found the user will be able to update,
+  
 * the user can also add a user if they have:
   - [ ] Firstname || Lastname || Phone Number
     * Optional (email, home phone, street number,
