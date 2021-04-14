@@ -142,14 +142,4 @@ public class Contact
                       fullAddress, city, zipCode);
     }
 
-    /**
-     * Prints all data for a contact in a single row to the terminal
-     */
-    public void printAllFieldsInRow()
-    {
-        String fullName = firstName + " " + lastName;
-        String fullAddress = streetNumber + " " + streetName;
-        System.out.printf("%-21s | %-10s | %-10s | %-20s | %-20s | %-15s | %-10s", fullName, mobileNumber, phoneNumber, email,
-                          fullAddress, city, zipCode);
-    }
 } // end class
